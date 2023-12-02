@@ -42,7 +42,7 @@ legend('x1','x2','u');
 
 % Plot controller gains
 subplot(2,2,4)
-newK=reshape(K,[2*size(control,1), size(control,2)-1]);
+newK=reshape(K,[size(state,1), size(control,2)-1]);
 plot(time(1:size(control,2)-1), newK(1,:),'LineWidth',2); hold on
 plot(time(1:size(control,2)-1), newK(2,:),'LineWidth',2); hold on
 xlabel('Time[s]');
