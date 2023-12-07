@@ -5,7 +5,7 @@
 ### For the DDPG, if you are using the Ubuntu system, you can run the code with the following command:
 ```python train_DDPG.py```
 
-Please refer to the paper for more details.
+### Please refer to the paper for more details.
 
 
 
