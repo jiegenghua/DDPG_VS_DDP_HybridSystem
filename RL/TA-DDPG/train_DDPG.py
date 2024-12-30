@@ -12,7 +12,7 @@ from SeaEnv import SeaEnv
 T = 2
 dt = 0.01
 total_episodes = 300
-env = MultiregionEnv()
+env = MultiregionEnv2()
 #
 num_states = env.observation_space.shape[0]
 num_actions = env.action_space.shape[0]
@@ -132,8 +132,8 @@ def get_actor():
     inputs = layers.Input(shape=(num_states, ))
     out = layers.Dense(256, activation="relu")(inputs)
     out = layers.Dense(256, activation="relu")(out)
-    outputs = layers.Dense(1, activation="tanh", kernel_initializer=last_init)(out)
-    outputs = outputs*upper_bound
+    outputs = layers.Dense(1, activation="relu", kernel_initializer=last_init)(out)
+    #outputs = outputs*upper_bound
     model = tf.keras.Model(inputs, outputs)
     return model
 

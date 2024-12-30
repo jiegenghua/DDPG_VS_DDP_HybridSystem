@@ -43,5 +43,5 @@ class MultiregionEnv(gym.Env):
         return self.state, reward, done, info
 
     def reset(self):
-        self.state = np.array([-8, -5, 0])
+        self.state = np.array([-8, -6, 0])
         return self.state
